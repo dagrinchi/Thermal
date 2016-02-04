@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Automatic">
+    <entity name="THInstalacion" syncable="YES">
+        <attribute name="creado" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="termogramas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="THTermograma" inverseName="instalacion" inverseEntity="THTermograma" syncable="YES"/>
+    </entity>
+    <entity name="THTermograma" syncable="YES">
+        <attribute name="condicionTermica" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="creado" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="imagenNormal" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="imagenTermica" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="nombreEquipo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ubicacion" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="instalacion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="THInstalacion" inverseName="termogramas" inverseEntity="THInstalacion" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="THInstalacion" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="THTermograma" positionX="-54" positionY="9" width="128" height="150"/>
+    </elements>
+</model>

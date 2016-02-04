@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		353CC1E250EAD645E912FFB1 /* libPods-Thermal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC6DAEABAF896DD8ABD8F66 /* libPods-Thermal.a */; };
+		63508D351C62863800CD23D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63508D341C62863800CD23D0 /* main.m */; };
+		63508D381C62863800CD23D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63508D371C62863800CD23D0 /* AppDelegate.m */; };
+		63508D3E1C62863800CD23D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63508D3C1C62863800CD23D0 /* Main.storyboard */; };
+		63508D411C62863800CD23D0 /* Thermal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63508D3F1C62863800CD23D0 /* Thermal.xcdatamodeld */; };
+		63508D431C62863800CD23D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63508D421C62863800CD23D0 /* Assets.xcassets */; };
+		63508D461C62863800CD23D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63508D441C62863800CD23D0 /* LaunchScreen.storyboard */; };
+		63508D551C6293F100CD23D0 /* THInstalacionesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63508D541C6293F100CD23D0 /* THInstalacionesTableViewController.m */; };
+		63508D581C62948900CD23D0 /* THInstalacionesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63508D571C62948900CD23D0 /* THInstalacionesTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A57CE4EC525B25C2D5AEB27 /* Pods-Thermal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thermal.release.xcconfig"; path = "Pods/Target Support Files/Pods-Thermal/Pods-Thermal.release.xcconfig"; sourceTree = "<group>"; };
+		63508D301C62863800CD23D0 /* Thermal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thermal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63508D341C62863800CD23D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		63508D361C62863800CD23D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		63508D371C62863800CD23D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		63508D3D1C62863800CD23D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		63508D401C62863800CD23D0 /* Thermal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Thermal.xcdatamodel; sourceTree = "<group>"; };
+		63508D421C62863800CD23D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63508D451C62863800CD23D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		63508D471C62863800CD23D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63508D501C628D5E00CD23D0 /* Thermal-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Thermal-Prefix.pch"; sourceTree = "<group>"; };
+		63508D521C628DA200CD23D0 /* THApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THApi.h; sourceTree = "<group>"; };
+		63508D531C6293F100CD23D0 /* THInstalacionesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THInstalacionesTableViewController.h; sourceTree = "<group>"; };
+		63508D541C6293F100CD23D0 /* THInstalacionesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THInstalacionesTableViewController.m; sourceTree = "<group>"; };
+		63508D561C62948900CD23D0 /* THInstalacionesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THInstalacionesTableViewCell.h; sourceTree = "<group>"; };
+		63508D571C62948900CD23D0 /* THInstalacionesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THInstalacionesTableViewCell.m; sourceTree = "<group>"; };
+		BEC6DAEABAF896DD8ABD8F66 /* libPods-Thermal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Thermal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFCFEFCD52A4F4012EAB434D /* Pods-Thermal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thermal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Thermal/Pods-Thermal.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63508D2D1C62863800CD23D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				353CC1E250EAD645E912FFB1 /* libPods-Thermal.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		466F5B10A239FF1DC06C921C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEC6DAEABAF896DD8ABD8F66 /* libPods-Thermal.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63508D271C62863800CD23D0 = {
+			isa = PBXGroup;
+			children = (
+				63508D321C62863800CD23D0 /* Thermal */,
+				63508D311C62863800CD23D0 /* Products */,
+				9EE2A71842F52AFDBB9F499A /* Pods */,
+				466F5B10A239FF1DC06C921C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		63508D311C62863800CD23D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63508D301C62863800CD23D0 /* Thermal.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63508D321C62863800CD23D0 /* Thermal */ = {
+			isa = PBXGroup;
+			children = (
+				63508D511C628D8600CD23D0 /* Config */,
+				63508D4E1C62870B00CD23D0 /* Controllers */,
+				63508D4D1C6286FB00CD23D0 /* Models */,
+				63508D4F1C62872400CD23D0 /* Views */,
+				63508D361C62863800CD23D0 /* AppDelegate.h */,
+				63508D371C62863800CD23D0 /* AppDelegate.m */,
+				63508D421C62863800CD23D0 /* Assets.xcassets */,
+				63508D471C62863800CD23D0 /* Info.plist */,
+				63508D331C62863800CD23D0 /* Supporting Files */,
+			);
+			path = Thermal;
+			sourceTree = "<group>";
+		};
+		63508D331C62863800CD23D0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				63508D341C62863800CD23D0 /* main.m */,
+				63508D501C628D5E00CD23D0 /* Thermal-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		63508D4D1C6286FB00CD23D0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				63508D3F1C62863800CD23D0 /* Thermal.xcdatamodeld */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		63508D4E1C62870B00CD23D0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				63508D531C6293F100CD23D0 /* THInstalacionesTableViewController.h */,
+				63508D541C6293F100CD23D0 /* THInstalacionesTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		63508D4F1C62872400CD23D0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				63508D3C1C62863800CD23D0 /* Main.storyboard */,
+				63508D441C62863800CD23D0 /* LaunchScreen.storyboard */,
+				63508D561C62948900CD23D0 /* THInstalacionesTableViewCell.h */,
+				63508D571C62948900CD23D0 /* THInstalacionesTableViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		63508D511C628D8600CD23D0 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				63508D521C628DA200CD23D0 /* THApi.h */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		9EE2A71842F52AFDBB9F499A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFCFEFCD52A4F4012EAB434D /* Pods-Thermal.debug.xcconfig */,
+				0A57CE4EC525B25C2D5AEB27 /* Pods-Thermal.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63508D2F1C62863800CD23D0 /* Thermal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63508D4A1C62863800CD23D0 /* Build configuration list for PBXNativeTarget "Thermal" */;
+			buildPhases = (
+				3A396FDE5F19F9EEE5DD7BA9 /* Check Pods Manifest.lock */,
+				63508D2C1C62863800CD23D0 /* Sources */,
+				63508D2D1C62863800CD23D0 /* Frameworks */,
+				63508D2E1C62863800CD23D0 /* Resources */,
+				3E0C01F96DC63F009F6E72DB /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Thermal;
+			productName = Thermal;
+			productReference = 63508D301C62863800CD23D0 /* Thermal.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63508D281C62863800CD23D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TH;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = mancoltda;
+				TargetAttributes = {
+					63508D2F1C62863800CD23D0 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 63508D2B1C62863800CD23D0 /* Build configuration list for PBXProject "Thermal" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 63508D271C62863800CD23D0;
+			productRefGroup = 63508D311C62863800CD23D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63508D2F1C62863800CD23D0 /* Thermal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63508D2E1C62863800CD23D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63508D461C62863800CD23D0 /* LaunchScreen.storyboard in Resources */,
+				63508D431C62863800CD23D0 /* Assets.xcassets in Resources */,
+				63508D3E1C62863800CD23D0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A396FDE5F19F9EEE5DD7BA9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3E0C01F96DC63F009F6E72DB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Thermal/Pods-Thermal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63508D2C1C62863800CD23D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63508D411C62863800CD23D0 /* Thermal.xcdatamodeld in Sources */,
+				63508D381C62863800CD23D0 /* AppDelegate.m in Sources */,
+				63508D581C62948900CD23D0 /* THInstalacionesTableViewCell.m in Sources */,
+				63508D351C62863800CD23D0 /* main.m in Sources */,
+				63508D551C6293F100CD23D0 /* THInstalacionesTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		63508D3C1C62863800CD23D0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63508D3D1C62863800CD23D0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		63508D441C62863800CD23D0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63508D451C62863800CD23D0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63508D481C62863800CD23D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		63508D491C62863800CD23D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63508D4B1C62863800CD23D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFCFEFCD52A4F4012EAB434D /* Pods-Thermal.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Thermal/Thermal-Prefix.pch";
+				INFOPLIST_FILE = Thermal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mancoltda.Thermal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		63508D4C1C62863800CD23D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A57CE4EC525B25C2D5AEB27 /* Pods-Thermal.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Thermal/Thermal-Prefix.pch";
+				INFOPLIST_FILE = Thermal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mancoltda.Thermal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63508D2B1C62863800CD23D0 /* Build configuration list for PBXProject "Thermal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63508D481C62863800CD23D0 /* Debug */,
+				63508D491C62863800CD23D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63508D4A1C62863800CD23D0 /* Build configuration list for PBXNativeTarget "Thermal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63508D4B1C62863800CD23D0 /* Debug */,
+				63508D4C1C62863800CD23D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		63508D3F1C62863800CD23D0 /* Thermal.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				63508D401C62863800CD23D0 /* Thermal.xcdatamodel */,
+			);
+			currentVersion = 63508D401C62863800CD23D0 /* Thermal.xcdatamodel */;
+			path = Thermal.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 63508D281C62863800CD23D0 /* Project object */;
+}
