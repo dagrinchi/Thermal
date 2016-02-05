@@ -97,17 +97,21 @@ static NSString *kAgregarEquipoSegueID = @"agregarEquipo";
         NSInteger row = indexPath.row;
         
         if (row < (NSInteger)equiposCount) {
-            THEquipoTableViewCell *cell = (THEquipoTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"equipoCell" forIndexPath:indexPath];
+
+            THEquipoTableViewCell *customCell = (THEquipoTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"equipoCell" forIndexPath:indexPath];
             THEquipo *equipo = [self.equipos objectAtIndex:row];
             
-            [cell.equipoNombreLabel setText:equipo.nombreEquipo];
-            [cell.equipoUbicacionLabel setText:equipo.ubicacion];
-//            [cell.equipoCondicionTermicaLabel setText:equipo.condicionTermica.nombre];
+            [customCell.equipoNombreLabel setText:equipo.nombreEquipo];
+            [customCell.equipoUbicacionLabel setText:equipo.ubicacion];
+            [customCell.equipoCondicionTermicaLabel setText:equipo.condicionTermica.nombre];
+            
+            cell = customCell;
             
         } else {
             cell = [tableView dequeueReusableCellWithIdentifier:@"agregarEquipoCell" forIndexPath:indexPath];
         }
     }
+    
     return cell;
 }
 
@@ -210,7 +214,24 @@ static NSString *kAgregarEquipoSegueID = @"agregarEquipo";
     return equipo;
 }
 
-- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == EQUIPOS_SECTION) {
+        
+        THEquipoFormViewController *equipoFormViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"equipoFormViewController"];
+        equipoFormViewController.instalacion = self.instalacion;
+
+        THEquipoTableViewCell *equipoCell = [tableView cellForRowAtIndexPath:indexPath];
+        equipoFormViewController.equipo = [self equipoByName:equipoCell.equipoNombreLabel.text];
+        
+        UINavigationController *navController =
+        [[UINavigationController alloc] initWithRootViewController:equipoFormViewController];
+
+        navController.modalPresentationStyle = UIModalPresentationFullScreen;
+        [self.navigationController presentViewController:navController animated:YES completion:nil];
+    }
+}
+
+/*- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSIndexPath *rowToSelect = indexPath;
     NSInteger section = indexPath.section;
@@ -225,7 +246,7 @@ static NSString *kAgregarEquipoSegueID = @"agregarEquipo";
     }
     
     return rowToSelect;
-}
+}*/
 
 
 #pragma mark -
@@ -310,12 +331,9 @@ static NSString *kAgregarEquipoSegueID = @"agregarEquipo";
     return target;
 }
 
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+{
     
-    /*
-     Update the ingredients array in response to the move.
-     Update the display order indexes within the range of the move.
-     */
     THEquipo *equipo = [self.equipos objectAtIndex:fromIndexPath.row];
     [self.equipos removeObjectAtIndex:fromIndexPath.row];
     [self.equipos insertObject:equipo atIndex:toIndexPath.row];
