@@ -16,7 +16,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    UINavigationController *instalacionesNavController = tabBarController.viewControllers[0];
+    UINavigationController *equipoCondicionTermicaNavController = tabBarController.viewControllers[1];
+    
+    THInstalacionesTableViewController *instalacionesTableViewController = (THInstalacionesTableViewController *)instalacionesNavController.topViewController;
+    instalacionesTableViewController.managedObjectContext = self.managedObjectContext;
+    
+    THEquipoCondicionTermicaTableViewController *equipoCondicionTermicaTableViewController = (THEquipoCondicionTermicaTableViewController *)equipoCondicionTermicaNavController.topViewController;
+    equipoCondicionTermicaTableViewController.managedObjectContext = self.managedObjectContext;
+    
     return YES;
 }
 
@@ -39,8 +49,16 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    // Saves changes in the application's managed object context before the application terminates.
+    
+    NSError *error;
+    if (self.managedObjectContext != nil) {
+        if ([self.managedObjectContext hasChanges] && ![self.managedObjectContext save:&error]) {
+            
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        } 
+    }
+
     [self saveContext];
 }
 

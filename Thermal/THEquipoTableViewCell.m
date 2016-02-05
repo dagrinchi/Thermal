@@ -1,14 +1,14 @@
 //
-//  THInstalacionesTableViewCell.m
+//  THEquipoTableViewCell.m
 //  Thermal
 //
-//  Created by David Almeciga on 2/3/16.
+//  Created by David Almeciga on 2/4/16.
 //  Copyright © 2016 mancoltda. All rights reserved.
 //
 
-#import "THInstalacionesTableViewCell.h"
+#import "THEquipoTableViewCell.h"
 
-@implementation THInstalacionesTableViewCell
+@implementation THEquipoTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code

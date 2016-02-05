@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "THInstalacionFomViewController.h"
+#import "THInstalacionDetalleTableViewController.h"
 
-@interface THInstalacionesTableViewController : UITableViewController
+@interface THInstalacionesTableViewController : UITableViewController <InstalacionAddDelegate, NSFetchedResultsControllerDelegate>
+
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
 @end

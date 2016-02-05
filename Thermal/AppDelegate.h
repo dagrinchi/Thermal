@@ -11,6 +11,9 @@
 #import <RestKit/CoreData.h>
 #import <RestKit/Search.h>
 
+#import "THInstalacionesTableViewController.h"
+#import "THEquipoCondicionTermicaTableViewController.h"
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

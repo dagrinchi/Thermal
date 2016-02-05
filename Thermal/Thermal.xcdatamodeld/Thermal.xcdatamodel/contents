@@ -1,21 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Automatic">
-    <entity name="THInstalacion" syncable="YES">
+    <entity name="THEquipo" representedClassName="THEquipo" syncable="YES">
         <attribute name="creado" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="termogramas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="THTermograma" inverseName="instalacion" inverseEntity="THTermograma" syncable="YES"/>
-    </entity>
-    <entity name="THTermograma" syncable="YES">
-        <attribute name="condicionTermica" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="creado" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="imagenNormal" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
-        <attribute name="imagenTermica" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="nombreEquipo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ubicacion" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="instalacion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="THInstalacion" inverseName="termogramas" inverseEntity="THInstalacion" syncable="YES"/>
+        <relationship name="condicionTermica" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="THEquipoCondicionTermica" inverseName="equipos" inverseEntity="THEquipoCondicionTermica" syncable="YES"/>
+        <relationship name="imagenNormal" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="THImagenNormal" inverseName="equipo" inverseEntity="THImagenNormal" syncable="YES"/>
+        <relationship name="imagenTermica" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="THImagenTermica" inverseName="equipo" inverseEntity="THImagenTermica" syncable="YES"/>
+        <relationship name="instalacion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="THInstalacion" inverseName="equipos" inverseEntity="THInstalacion" syncable="YES"/>
+    </entity>
+    <entity name="THEquipoCondicionTermica" representedClassName="THEquipoCondicionTermica" syncable="YES">
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="equipos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="THEquipo" inverseName="condicionTermica" inverseEntity="THEquipo" syncable="YES"/>
+    </entity>
+    <entity name="THImagenNormal" representedClassName="THImagenNormal" syncable="YES">
+        <attribute name="creado" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="imagen" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="equipo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="THEquipo" inverseName="imagenNormal" inverseEntity="THEquipo" syncable="YES"/>
+    </entity>
+    <entity name="THImagenTermica" representedClassName="THImagenTermica" syncable="YES">
+        <attribute name="creado" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="imagen" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="equipo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="THEquipo" inverseName="imagenTermica" inverseEntity="THEquipo" syncable="YES"/>
+    </entity>
+    <entity name="THInstalacion" representedClassName="THInstalacion" syncable="YES">
+        <attribute name="creado" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="equipos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="THEquipo" inverseName="instalacion" inverseEntity="THEquipo" syncable="YES"/>
     </entity>
     <elements>
-        <element name="THInstalacion" positionX="-63" positionY="-18" width="128" height="90"/>
-        <element name="THTermograma" positionX="-54" positionY="9" width="128" height="150"/>
+        <element name="THInstalacion" positionX="-477" positionY="-403" width="128" height="88"/>
+        <element name="THEquipo" positionX="-270" positionY="-463" width="128" height="148"/>
+        <element name="THImagenNormal" positionX="-72" positionY="-429" width="128" height="88"/>
+        <element name="THImagenTermica" positionX="-72" positionY="-342" width="128" height="88"/>
+        <element name="THEquipoCondicionTermica" positionX="-479" positionY="-543" width="128" height="73"/>
     </elements>
 </model>

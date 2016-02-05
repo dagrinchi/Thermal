@@ -1,29 +1,28 @@
 //
-//  THInstalacionesTableViewController.m
+//  THEquipoCondicionTermicaTableViewController.m
 //  Thermal
 //
-//  Created by David Almeciga on 2/3/16.
+//  Created by David Almeciga on 2/4/16.
 //  Copyright © 2016 mancoltda. All rights reserved.
 //
 
-#import "THInstalacionesTableViewController.h"
+#import "THEquipoCondicionTermicaTableViewController.h"
 
-@interface THInstalacionesTableViewController ()
+@interface THEquipoCondicionTermicaTableViewController ()
 
 @end
 
-@implementation THInstalacionesTableViewController
-
-
-static NSString *kVerInstalacionSegueID = @"verInstalacion";
-static NSString *kAgregarInstalacionSegueID = @"agregarInstalacion";
+@implementation THEquipoCondicionTermicaTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.managedObjectContext = appDelegate.managedObjectContext;
+    
     NSError *error = nil;
     if (![[self fetchedResultsController] performFetch:&error]) {
-
+        
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
@@ -33,18 +32,6 @@ static NSString *kAgregarInstalacionSegueID = @"agregarInstalacion";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-#pragma mark -
-
-- (void)instalacionFormViewController:(THInstalacionFomViewController *)instalacionFormViewController :(THInstalacion *)instalacion
-{
-    if (instalacion) {
-        [self performSegueWithIdentifier:kVerInstalacionSegueID sender:instalacion];
-    }
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
 
 #pragma mark - Table view data source
 
@@ -73,19 +60,23 @@ static NSString *kAgregarInstalacionSegueID = @"agregarInstalacion";
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"equipoCondicionTermicaCell" forIndexPath:indexPath];
     
-    UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"instalacionCell" forIndexPath:indexPath];
+    NSString *reuseIdentifier = @"equipoCondicionTermicaCell";
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
+    }
     
-    [self configureCell:cell atIndexPath:indexPath];
+    [self configureCell:cell atIndexPath:indexPath];    
     return cell;
 }
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     
-    THInstalacion *instalacion = (THInstalacion *)[self.fetchedResultsController objectAtIndexPath:indexPath];
-    [cell.textLabel setText:instalacion.nombre];
+    THEquipoCondicionTermica *equipoCondicionTermica = (THEquipoCondicionTermica *)[self.fetchedResultsController objectAtIndexPath:indexPath];
+    [cell.textLabel setText:equipoCondicionTermica.nombre];
 }
-
 
 /*
 // Override to support conditional editing of the table view.
@@ -121,33 +112,20 @@ static NSString *kAgregarInstalacionSegueID = @"agregarInstalacion";
 }
 */
 
+
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:kVerInstalacionSegueID]) {
-        
-        THInstalacionDetalleTableViewController *instalacionDetalleViewController = (THInstalacionDetalleTableViewController *) segue.destinationViewController;
-        
-        THInstalacion *instalacion = nil;
-        
-        if ([sender isKindOfClass:[THInstalacion class]]) {
-            instalacion = (THInstalacion *)sender;
-        } else {
-            NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-            instalacion = (THInstalacion *)[self.fetchedResultsController objectAtIndexPath:indexPath];
-        }
-        
-        instalacionDetalleViewController.instalacion = instalacion;
-    }
-    else if ([segue.identifier isEqualToString:kAgregarInstalacionSegueID]) {
-        THInstalacion *instalacion = [NSEntityDescription insertNewObjectForEntityForName:@"THInstalacion"
-                                                          inManagedObjectContext:self.managedObjectContext];
+    if ([segue.identifier isEqualToString:@"agregarEquipoCondicionTermica"]) {
+        THEquipoCondicionTermica *equipoCondicionTermica = [NSEntityDescription insertNewObjectForEntityForName:@"THEquipoCondicionTermica"
+                                                                   inManagedObjectContext:self.managedObjectContext];
         
         UINavigationController *navController = segue.destinationViewController;
-        THInstalacionFomViewController *formController = (THInstalacionFomViewController *)navController.topViewController;
+        THEquipoCondicionTermicaViewController *formController = (THEquipoCondicionTermicaViewController *)navController.topViewController;
+        
         formController.delegate = self;
-        formController.instalacion = instalacion;
+        formController.equipoCondicionTermica = equipoCondicionTermica;
     }
 }
 
@@ -157,10 +135,10 @@ static NSString *kAgregarInstalacionSegueID = @"agregarInstalacion";
     
     if (_fetchedResultsController == nil) {
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-        NSEntityDescription *entity = [NSEntityDescription entityForName:@"THInstalacion" inManagedObjectContext:self.managedObjectContext];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"THEquipoCondicionTermica" inManagedObjectContext:self.managedObjectContext];
         [fetchRequest setEntity:entity];
         
-        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"creado" ascending:YES];
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"nombre" ascending:YES];
         NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
         
         [fetchRequest setSortDescriptors:sortDescriptors];
@@ -215,7 +193,7 @@ static NSString *kAgregarInstalacionSegueID = @"agregarInstalacion";
         case NSFetchedResultsChangeDelete:
             [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
             break;
-        
+            
         default:
             break;
     }
@@ -225,5 +203,26 @@ static NSString *kAgregarInstalacionSegueID = @"agregarInstalacion";
     [self.tableView endUpdates];
 }
 
+#pragma mark
+
+- (void)equipoCondicionTermincaFormViewController:(THEquipoCondicionTermicaViewController *)equipoCondicionTermincaFormViewController :(THEquipoCondicionTermica *)equipoCondicionTermica;
+{
+//    if (equipoCondicionTermica) {
+//        [self performSegueWithIdentifier:kVerInstalacionSegueID sender:equipoCondicionTermica];
+//    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    THEquipoCondicionTermica *equipoCondicionTermica = nil;
+    if (tableView == self.tableView) {
+        equipoCondicionTermica = [_fetchedResultsController objectAtIndexPath:indexPath];
+    }
+    
+    self.field.value = equipoCondicionTermica;
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 @end
