@@ -24,16 +24,26 @@
 		63508DBF1C63C17A00CD23D0 /* THInstalacion.m in Sources */ = {isa = PBXBuildFile; fileRef = 63508DAF1C63C17A00CD23D0 /* THInstalacion.m */; };
 		63508DC01C63C17A00CD23D0 /* THEquipo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 63508DB11C63C17A00CD23D0 /* THEquipo+CoreDataProperties.m */; };
 		63508DC11C63C17A00CD23D0 /* THEquipo.m in Sources */ = {isa = PBXBuildFile; fileRef = 63508DB31C63C17A00CD23D0 /* THEquipo.m */; };
-		63508DC21C63C17A00CD23D0 /* THImagenNormal+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 63508DB51C63C17A00CD23D0 /* THImagenNormal+CoreDataProperties.m */; };
-		63508DC31C63C17A00CD23D0 /* THImagenNormal.m in Sources */ = {isa = PBXBuildFile; fileRef = 63508DB71C63C17A00CD23D0 /* THImagenNormal.m */; };
-		63508DC41C63C17A00CD23D0 /* THImagenTermica+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 63508DB91C63C17A00CD23D0 /* THImagenTermica+CoreDataProperties.m */; };
-		63508DC51C63C17A00CD23D0 /* THImagenTermica.m in Sources */ = {isa = PBXBuildFile; fileRef = 63508DBB1C63C17A00CD23D0 /* THImagenTermica.m */; };
 		63508DC81C63CB4E00CD23D0 /* THEquipoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63508DC71C63CB4E00CD23D0 /* THEquipoTableViewCell.m */; };
 		63508DCE1C63D51B00CD23D0 /* THEquipoFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63508DCD1C63D51B00CD23D0 /* THEquipoFormViewController.m */; };
 		63508DD11C63DA4200CD23D0 /* THEquipoForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 63508DD01C63DA4200CD23D0 /* THEquipoForm.m */; };
 		63508DD41C64121400CD23D0 /* THEquipoCondicionTermicaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63508DD31C64121400CD23D0 /* THEquipoCondicionTermicaTableViewController.m */; };
 		63508DD71C64196400CD23D0 /* THEquipoCondicionTermicaForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 63508DD61C64196400CD23D0 /* THEquipoCondicionTermicaForm.m */; };
 		63508DDA1C6419F600CD23D0 /* THEquipoCondicionTermicaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63508DD91C6419F600CD23D0 /* THEquipoCondicionTermicaViewController.m */; };
+		636896811C66C35E008AF28B /* THEquipoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636896801C66C35E008AF28B /* THEquipoTableViewController.m */; };
+		63856E3F1C6788FF005873C5 /* THEquipoImagenTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63856E3E1C6788FF005873C5 /* THEquipoImagenTableViewCell.m */; };
+		63856E421C6789E3005873C5 /* THEquipoImagenCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63856E411C6789E3005873C5 /* THEquipoImagenCollectionView.m */; };
+		63856E451C68DABE005873C5 /* THEquipoImagenCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63856E441C68DABE005873C5 /* THEquipoImagenCollectionViewCell.m */; };
+		63856E481C68DF52005873C5 /* THImagenTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 63856E471C68DF52005873C5 /* THImagenTransformer.m */; };
+		63856E541C68EC6E005873C5 /* THImagenTermica+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 63856E4D1C68EC6E005873C5 /* THImagenTermica+CoreDataProperties.m */; };
+		63856E551C68EC6E005873C5 /* THImagenTermica.m in Sources */ = {isa = PBXBuildFile; fileRef = 63856E4F1C68EC6E005873C5 /* THImagenTermica.m */; };
+		63856E561C68EC6E005873C5 /* THImagenNormal+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 63856E511C68EC6E005873C5 /* THImagenNormal+CoreDataProperties.m */; };
+		63856E571C68EC6E005873C5 /* THImagenNormal.m in Sources */ = {isa = PBXBuildFile; fileRef = 63856E531C68EC6E005873C5 /* THImagenNormal.m */; };
+		63856E5D1C68FCD2005873C5 /* THEquipoImagenTermicaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63856E5C1C68FCD2005873C5 /* THEquipoImagenTermicaTableViewCell.m */; };
+		63856E601C690150005873C5 /* THEquipoImagenTermicaCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63856E5F1C690150005873C5 /* THEquipoImagenTermicaCollectionView.m */; };
+		63856E631C690264005873C5 /* THEquipoImagenTermicaCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63856E621C690264005873C5 /* THEquipoImagenTermicaCollectionViewCell.m */; };
+		63856E661C6916E2005873C5 /* THImagenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63856E651C6916E2005873C5 /* THImagenViewController.m */; };
+		63856E691C692217005873C5 /* THEditarEquipoCondicionTermicaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63856E681C692217005873C5 /* THEditarEquipoCondicionTermicaTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,14 +79,6 @@
 		63508DB11C63C17A00CD23D0 /* THEquipo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "THEquipo+CoreDataProperties.m"; sourceTree = "<group>"; };
 		63508DB21C63C17A00CD23D0 /* THEquipo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THEquipo.h; sourceTree = "<group>"; };
 		63508DB31C63C17A00CD23D0 /* THEquipo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THEquipo.m; sourceTree = "<group>"; };
-		63508DB41C63C17A00CD23D0 /* THImagenNormal+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "THImagenNormal+CoreDataProperties.h"; sourceTree = "<group>"; };
-		63508DB51C63C17A00CD23D0 /* THImagenNormal+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "THImagenNormal+CoreDataProperties.m"; sourceTree = "<group>"; };
-		63508DB61C63C17A00CD23D0 /* THImagenNormal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THImagenNormal.h; sourceTree = "<group>"; };
-		63508DB71C63C17A00CD23D0 /* THImagenNormal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THImagenNormal.m; sourceTree = "<group>"; };
-		63508DB81C63C17A00CD23D0 /* THImagenTermica+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "THImagenTermica+CoreDataProperties.h"; sourceTree = "<group>"; };
-		63508DB91C63C17A00CD23D0 /* THImagenTermica+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "THImagenTermica+CoreDataProperties.m"; sourceTree = "<group>"; };
-		63508DBA1C63C17A00CD23D0 /* THImagenTermica.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THImagenTermica.h; sourceTree = "<group>"; };
-		63508DBB1C63C17A00CD23D0 /* THImagenTermica.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THImagenTermica.m; sourceTree = "<group>"; };
 		63508DC61C63CB4E00CD23D0 /* THEquipoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THEquipoTableViewCell.h; sourceTree = "<group>"; };
 		63508DC71C63CB4E00CD23D0 /* THEquipoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THEquipoTableViewCell.m; sourceTree = "<group>"; };
 		63508DCC1C63D51B00CD23D0 /* THEquipoFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THEquipoFormViewController.h; sourceTree = "<group>"; };
@@ -89,6 +91,34 @@
 		63508DD61C64196400CD23D0 /* THEquipoCondicionTermicaForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THEquipoCondicionTermicaForm.m; sourceTree = "<group>"; };
 		63508DD81C6419F600CD23D0 /* THEquipoCondicionTermicaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THEquipoCondicionTermicaViewController.h; sourceTree = "<group>"; };
 		63508DD91C6419F600CD23D0 /* THEquipoCondicionTermicaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THEquipoCondicionTermicaViewController.m; sourceTree = "<group>"; };
+		6368967F1C66C35E008AF28B /* THEquipoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THEquipoTableViewController.h; sourceTree = "<group>"; };
+		636896801C66C35E008AF28B /* THEquipoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THEquipoTableViewController.m; sourceTree = "<group>"; };
+		63856E3D1C6788FF005873C5 /* THEquipoImagenTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THEquipoImagenTableViewCell.h; sourceTree = "<group>"; };
+		63856E3E1C6788FF005873C5 /* THEquipoImagenTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THEquipoImagenTableViewCell.m; sourceTree = "<group>"; };
+		63856E401C6789E3005873C5 /* THEquipoImagenCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THEquipoImagenCollectionView.h; sourceTree = "<group>"; };
+		63856E411C6789E3005873C5 /* THEquipoImagenCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THEquipoImagenCollectionView.m; sourceTree = "<group>"; };
+		63856E431C68DABE005873C5 /* THEquipoImagenCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THEquipoImagenCollectionViewCell.h; sourceTree = "<group>"; };
+		63856E441C68DABE005873C5 /* THEquipoImagenCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THEquipoImagenCollectionViewCell.m; sourceTree = "<group>"; };
+		63856E461C68DF52005873C5 /* THImagenTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THImagenTransformer.h; sourceTree = "<group>"; };
+		63856E471C68DF52005873C5 /* THImagenTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THImagenTransformer.m; sourceTree = "<group>"; };
+		63856E4C1C68EC6E005873C5 /* THImagenTermica+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "THImagenTermica+CoreDataProperties.h"; sourceTree = "<group>"; };
+		63856E4D1C68EC6E005873C5 /* THImagenTermica+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "THImagenTermica+CoreDataProperties.m"; sourceTree = "<group>"; };
+		63856E4E1C68EC6E005873C5 /* THImagenTermica.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THImagenTermica.h; sourceTree = "<group>"; };
+		63856E4F1C68EC6E005873C5 /* THImagenTermica.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THImagenTermica.m; sourceTree = "<group>"; };
+		63856E501C68EC6E005873C5 /* THImagenNormal+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "THImagenNormal+CoreDataProperties.h"; sourceTree = "<group>"; };
+		63856E511C68EC6E005873C5 /* THImagenNormal+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "THImagenNormal+CoreDataProperties.m"; sourceTree = "<group>"; };
+		63856E521C68EC6E005873C5 /* THImagenNormal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THImagenNormal.h; sourceTree = "<group>"; };
+		63856E531C68EC6E005873C5 /* THImagenNormal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THImagenNormal.m; sourceTree = "<group>"; };
+		63856E5B1C68FCD2005873C5 /* THEquipoImagenTermicaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THEquipoImagenTermicaTableViewCell.h; sourceTree = "<group>"; };
+		63856E5C1C68FCD2005873C5 /* THEquipoImagenTermicaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THEquipoImagenTermicaTableViewCell.m; sourceTree = "<group>"; };
+		63856E5E1C690150005873C5 /* THEquipoImagenTermicaCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THEquipoImagenTermicaCollectionView.h; sourceTree = "<group>"; };
+		63856E5F1C690150005873C5 /* THEquipoImagenTermicaCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THEquipoImagenTermicaCollectionView.m; sourceTree = "<group>"; };
+		63856E611C690264005873C5 /* THEquipoImagenTermicaCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THEquipoImagenTermicaCollectionViewCell.h; sourceTree = "<group>"; };
+		63856E621C690264005873C5 /* THEquipoImagenTermicaCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THEquipoImagenTermicaCollectionViewCell.m; sourceTree = "<group>"; };
+		63856E641C6916E2005873C5 /* THImagenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THImagenViewController.h; sourceTree = "<group>"; };
+		63856E651C6916E2005873C5 /* THImagenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THImagenViewController.m; sourceTree = "<group>"; };
+		63856E671C692217005873C5 /* THEditarEquipoCondicionTermicaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THEditarEquipoCondicionTermicaTableViewController.h; sourceTree = "<group>"; };
+		63856E681C692217005873C5 /* THEditarEquipoCondicionTermicaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THEditarEquipoCondicionTermicaTableViewController.m; sourceTree = "<group>"; };
 		BEC6DAEABAF896DD8ABD8F66 /* libPods-Thermal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Thermal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCFEFCD52A4F4012EAB434D /* Pods-Thermal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thermal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Thermal/Pods-Thermal.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +190,14 @@
 		63508D4D1C6286FB00CD23D0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				63856E4C1C68EC6E005873C5 /* THImagenTermica+CoreDataProperties.h */,
+				63856E4D1C68EC6E005873C5 /* THImagenTermica+CoreDataProperties.m */,
+				63856E4E1C68EC6E005873C5 /* THImagenTermica.h */,
+				63856E4F1C68EC6E005873C5 /* THImagenTermica.m */,
+				63856E501C68EC6E005873C5 /* THImagenNormal+CoreDataProperties.h */,
+				63856E511C68EC6E005873C5 /* THImagenNormal+CoreDataProperties.m */,
+				63856E521C68EC6E005873C5 /* THImagenNormal.h */,
+				63856E531C68EC6E005873C5 /* THImagenNormal.m */,
 				63508DA81C63C17A00CD23D0 /* THEquipoCondicionTermica+CoreDataProperties.h */,
 				63508DA91C63C17A00CD23D0 /* THEquipoCondicionTermica+CoreDataProperties.m */,
 				63508DAA1C63C17A00CD23D0 /* THEquipoCondicionTermica.h */,
@@ -172,15 +210,9 @@
 				63508DB11C63C17A00CD23D0 /* THEquipo+CoreDataProperties.m */,
 				63508DB21C63C17A00CD23D0 /* THEquipo.h */,
 				63508DB31C63C17A00CD23D0 /* THEquipo.m */,
-				63508DB41C63C17A00CD23D0 /* THImagenNormal+CoreDataProperties.h */,
-				63508DB51C63C17A00CD23D0 /* THImagenNormal+CoreDataProperties.m */,
-				63508DB61C63C17A00CD23D0 /* THImagenNormal.h */,
-				63508DB71C63C17A00CD23D0 /* THImagenNormal.m */,
-				63508DB81C63C17A00CD23D0 /* THImagenTermica+CoreDataProperties.h */,
-				63508DB91C63C17A00CD23D0 /* THImagenTermica+CoreDataProperties.m */,
-				63508DBA1C63C17A00CD23D0 /* THImagenTermica.h */,
-				63508DBB1C63C17A00CD23D0 /* THImagenTermica.m */,
 				63508D3F1C62863800CD23D0 /* Thermal.xcdatamodeld */,
+				63856E461C68DF52005873C5 /* THImagenTransformer.h */,
+				63856E471C68DF52005873C5 /* THImagenTransformer.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -200,6 +232,12 @@
 				63508DD31C64121400CD23D0 /* THEquipoCondicionTermicaTableViewController.m */,
 				63508DD81C6419F600CD23D0 /* THEquipoCondicionTermicaViewController.h */,
 				63508DD91C6419F600CD23D0 /* THEquipoCondicionTermicaViewController.m */,
+				6368967F1C66C35E008AF28B /* THEquipoTableViewController.h */,
+				636896801C66C35E008AF28B /* THEquipoTableViewController.m */,
+				63856E641C6916E2005873C5 /* THImagenViewController.h */,
+				63856E651C6916E2005873C5 /* THImagenViewController.m */,
+				63856E671C692217005873C5 /* THEditarEquipoCondicionTermicaTableViewController.h */,
+				63856E681C692217005873C5 /* THEditarEquipoCondicionTermicaTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -207,10 +245,22 @@
 		63508D4F1C62872400CD23D0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				63856E5B1C68FCD2005873C5 /* THEquipoImagenTermicaTableViewCell.h */,
+				63856E5C1C68FCD2005873C5 /* THEquipoImagenTermicaTableViewCell.m */,
 				63508D3C1C62863800CD23D0 /* Main.storyboard */,
 				63508D441C62863800CD23D0 /* LaunchScreen.storyboard */,
 				63508DC61C63CB4E00CD23D0 /* THEquipoTableViewCell.h */,
 				63508DC71C63CB4E00CD23D0 /* THEquipoTableViewCell.m */,
+				63856E3D1C6788FF005873C5 /* THEquipoImagenTableViewCell.h */,
+				63856E3E1C6788FF005873C5 /* THEquipoImagenTableViewCell.m */,
+				63856E401C6789E3005873C5 /* THEquipoImagenCollectionView.h */,
+				63856E411C6789E3005873C5 /* THEquipoImagenCollectionView.m */,
+				63856E431C68DABE005873C5 /* THEquipoImagenCollectionViewCell.h */,
+				63856E441C68DABE005873C5 /* THEquipoImagenCollectionViewCell.m */,
+				63856E5E1C690150005873C5 /* THEquipoImagenTermicaCollectionView.h */,
+				63856E5F1C690150005873C5 /* THEquipoImagenTermicaCollectionView.m */,
+				63856E611C690264005873C5 /* THEquipoImagenTermicaCollectionViewCell.h */,
+				63856E621C690264005873C5 /* THEquipoImagenTermicaCollectionViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -352,28 +402,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				63508D411C62863800CD23D0 /* Thermal.xcdatamodeld in Sources */,
+				63856E691C692217005873C5 /* THEditarEquipoCondicionTermicaTableViewController.m in Sources */,
 				63508DD11C63DA4200CD23D0 /* THEquipoForm.m in Sources */,
-				63508DC31C63C17A00CD23D0 /* THImagenNormal.m in Sources */,
-				63508DC21C63C17A00CD23D0 /* THImagenNormal+CoreDataProperties.m in Sources */,
+				63856E3F1C6788FF005873C5 /* THEquipoImagenTableViewCell.m in Sources */,
 				63508DC01C63C17A00CD23D0 /* THEquipo+CoreDataProperties.m in Sources */,
 				63508DD71C64196400CD23D0 /* THEquipoCondicionTermicaForm.m in Sources */,
+				63856E571C68EC6E005873C5 /* THImagenNormal.m in Sources */,
+				63856E451C68DABE005873C5 /* THEquipoImagenCollectionViewCell.m in Sources */,
+				63856E551C68EC6E005873C5 /* THImagenTermica.m in Sources */,
+				636896811C66C35E008AF28B /* THEquipoTableViewController.m in Sources */,
 				63508DC11C63C17A00CD23D0 /* THEquipo.m in Sources */,
 				63508DDA1C6419F600CD23D0 /* THEquipoCondicionTermicaViewController.m in Sources */,
+				63856E631C690264005873C5 /* THEquipoImagenTermicaCollectionViewCell.m in Sources */,
 				63508DC81C63CB4E00CD23D0 /* THEquipoTableViewCell.m in Sources */,
 				63508D381C62863800CD23D0 /* AppDelegate.m in Sources */,
 				63508DBC1C63C17A00CD23D0 /* THEquipoCondicionTermica+CoreDataProperties.m in Sources */,
+				63856E561C68EC6E005873C5 /* THImagenNormal+CoreDataProperties.m in Sources */,
 				63508DBF1C63C17A00CD23D0 /* THInstalacion.m in Sources */,
 				63508D891C63B96400CD23D0 /* THInstalacionDetalleTableViewController.m in Sources */,
+				63856E481C68DF52005873C5 /* THImagenTransformer.m in Sources */,
+				63856E541C68EC6E005873C5 /* THImagenTermica+CoreDataProperties.m in Sources */,
 				63508DD41C64121400CD23D0 /* THEquipoCondicionTermicaTableViewController.m in Sources */,
 				63508DBE1C63C17A00CD23D0 /* THInstalacion+CoreDataProperties.m in Sources */,
-				63508DC51C63C17A00CD23D0 /* THImagenTermica.m in Sources */,
+				63856E5D1C68FCD2005873C5 /* THEquipoImagenTermicaTableViewCell.m in Sources */,
+				63856E421C6789E3005873C5 /* THEquipoImagenCollectionView.m in Sources */,
 				63508D5C1C63874B00CD23D0 /* THInstalacionFomViewController.m in Sources */,
+				63856E601C690150005873C5 /* THEquipoImagenTermicaCollectionView.m in Sources */,
 				63508D351C62863800CD23D0 /* main.m in Sources */,
-				63508DC41C63C17A00CD23D0 /* THImagenTermica+CoreDataProperties.m in Sources */,
 				63508D6B1C63885500CD23D0 /* THInstalacionForm.m in Sources */,
 				63508DCE1C63D51B00CD23D0 /* THEquipoFormViewController.m in Sources */,
 				63508D551C6293F100CD23D0 /* THInstalacionesTableViewController.m in Sources */,
 				63508DBD1C63C17A00CD23D0 /* THEquipoCondicionTermica.m in Sources */,
+				63856E661C6916E2005873C5 /* THImagenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

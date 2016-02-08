@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9me-WH-fdW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9me-WH-fdW">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -180,7 +180,6 @@
                                     <outlet property="equipoCondicionTermicaLabel" destination="BoB-kr-hso" id="2mJ-8U-ZCg"/>
                                     <outlet property="equipoNombreLabel" destination="yv4-PL-VJ4" id="MSM-xa-wo2"/>
                                     <outlet property="equipoUbicacionLabel" destination="9iw-q4-WOn" id="p0Z-G5-wms"/>
-                                    <segue destination="Vkm-Ma-Xly" kind="show" id="adH-gh-gq7"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="agregarEquipoCell" textLabel="Nuq-DS-REu" style="IBUITableViewCellStyleDefault" id="Qx3-GE-2ra">
@@ -222,96 +221,273 @@
             </objects>
             <point key="canvasLocation" x="2072" y="804"/>
         </scene>
-        <!--Collection View Controller-->
-        <scene sceneID="mEo-LM-CN5">
+        <!--Equipo Table View Controller-->
+        <scene sceneID="gur-L3-dgk">
             <objects>
-                <collectionViewController id="Vkm-Ma-Xly" sceneMemberID="viewController">
-                    <collectionView key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="vvm-jk-FdK">
+                <tableViewController storyboardIdentifier="equipoViewController" id="zcp-J1-dCh" customClass="THEquipoTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="3Ex-1L-HRB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="4sO-2x-nsa">
-                            <size key="itemSize" width="200" height="200"/>
-                            <size key="headerReferenceSize" width="0.0" height="200"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <view key="backgroundView" contentMode="scaleToFill" id="wAT-8z-cyi">
-                            <rect key="frame" x="0.0" y="-64" width="600" height="600"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="wAT-8z-cyi">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="130"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del equipo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUv-Og-jry">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nombre del equipo" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="PRg-XU-f6F">
                                     <rect key="frame" x="8" y="8" width="584" height="32"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="27"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ubicación" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNa-Fe-diJ">
-                                    <rect key="frame" x="8" y="41" width="584" height="20.5"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="zcp-J1-dCh" id="rv6-h5-5Wt"/>
+                                    </connections>
+                                </textField>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ubicación" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mV0-kA-KTE">
+                                    <rect key="frame" x="8" y="40" width="584" height="23"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="zcp-J1-dCh" id="qeF-W4-Zp5"/>
+                                    </connections>
+                                </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha de creación" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnQ-QA-8Ri">
-                                    <rect key="frame" x="8" y="60" width="584" height="20.5"/>
+                                    <rect key="frame" x="8" y="99" width="584" height="20.5"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condición termica" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZc-BJ-31d">
-                                    <rect key="frame" x="464" y="39" width="128" height="20.5"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-ThinItalic" family="Helvetica Neue" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eck-se-lgB">
+                                    <rect key="frame" x="8" y="61" width="584" height="35"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="19"/>
+                                    <state key="normal" title="Condición térmica"/>
+                                    <connections>
+                                        <segue destination="65d-ef-C9Z" kind="show" identifier="cambiarCondicionTermica" id="h2x-FS-hb2"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="jUv-Og-jry" firstAttribute="leading" secondItem="wAT-8z-cyi" secondAttribute="leading" constant="8" id="1z5-uy-lOV"/>
-                                <constraint firstItem="AZc-BJ-31d" firstAttribute="top" secondItem="wAT-8z-cyi" secondAttribute="top" constant="39" id="21k-SU-wGF"/>
-                                <constraint firstItem="lNa-Fe-diJ" firstAttribute="top" secondItem="jUv-Og-jry" secondAttribute="bottom" constant="1.5" id="L2K-mA-9sX"/>
-                                <constraint firstItem="lNa-Fe-diJ" firstAttribute="leading" secondItem="wAT-8z-cyi" secondAttribute="leading" constant="8" id="PxS-ak-5lV"/>
-                                <constraint firstItem="dnQ-QA-8Ri" firstAttribute="leading" secondItem="wAT-8z-cyi" secondAttribute="leading" constant="8" id="QAH-QY-Fm5"/>
-                                <constraint firstItem="dnQ-QA-8Ri" firstAttribute="top" secondItem="lNa-Fe-diJ" secondAttribute="bottom" constant="-1.5" id="Urb-pM-kHf"/>
-                                <constraint firstItem="AZc-BJ-31d" firstAttribute="centerX" secondItem="wAT-8z-cyi" secondAttribute="centerX" constant="228" id="aWJ-Yb-aPr"/>
-                                <constraint firstAttribute="trailing" secondItem="lNa-Fe-diJ" secondAttribute="trailing" constant="8" id="jzX-37-65e"/>
-                                <constraint firstAttribute="trailing" secondItem="dnQ-QA-8Ri" secondAttribute="trailing" constant="8" id="q3y-Yv-h50"/>
-                                <constraint firstAttribute="trailing" secondItem="jUv-Og-jry" secondAttribute="trailing" constant="8" id="vsC-xB-k3W"/>
-                                <constraint firstItem="jUv-Og-jry" firstAttribute="top" secondItem="wAT-8z-cyi" secondAttribute="top" constant="8" id="wFo-ZD-xsE"/>
+                                <constraint firstItem="dnQ-QA-8Ri" firstAttribute="leading" secondItem="wAT-8z-cyi" secondAttribute="leading" constant="8" id="3db-Ma-0ZT"/>
+                                <constraint firstItem="PRg-XU-f6F" firstAttribute="top" secondItem="wAT-8z-cyi" secondAttribute="top" constant="8" id="8Yk-ts-PzC"/>
+                                <constraint firstItem="eck-se-lgB" firstAttribute="top" secondItem="mV0-kA-KTE" secondAttribute="bottom" constant="-2" id="C2d-Z1-KJK"/>
+                                <constraint firstAttribute="trailing" secondItem="PRg-XU-f6F" secondAttribute="trailing" constant="8" id="I3R-ju-smT"/>
+                                <constraint firstAttribute="trailing" secondItem="mV0-kA-KTE" secondAttribute="trailing" constant="8" id="Id4-aG-a4C"/>
+                                <constraint firstAttribute="trailing" secondItem="eck-se-lgB" secondAttribute="trailing" constant="8" id="K86-cn-F4V"/>
+                                <constraint firstItem="dnQ-QA-8Ri" firstAttribute="top" secondItem="eck-se-lgB" secondAttribute="bottom" constant="3" id="WFz-ez-fCL"/>
+                                <constraint firstItem="eck-se-lgB" firstAttribute="leading" secondItem="wAT-8z-cyi" secondAttribute="leading" constant="8" id="fwP-JW-X7u"/>
+                                <constraint firstItem="mV0-kA-KTE" firstAttribute="leading" secondItem="wAT-8z-cyi" secondAttribute="leading" constant="8" id="gWy-yw-YZ8"/>
+                                <constraint firstItem="PRg-XU-f6F" firstAttribute="leading" secondItem="wAT-8z-cyi" secondAttribute="leading" constant="8" id="hh0-TN-T3r"/>
+                                <constraint firstAttribute="bottom" secondItem="dnQ-QA-8Ri" secondAttribute="bottom" constant="10.5" id="pQE-d4-5qa"/>
+                                <constraint firstAttribute="trailing" secondItem="dnQ-QA-8Ri" secondAttribute="trailing" constant="8" id="prl-Vi-LkA"/>
+                                <constraint firstItem="mV0-kA-KTE" firstAttribute="top" secondItem="PRg-XU-f6F" secondAttribute="bottom" id="xAS-pT-ALA"/>
                             </constraints>
                         </view>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="G7Y-Wm-gXc">
-                                <rect key="frame" x="0.0" y="264" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="imagenNormalCell" id="mYQ-Qp-yPj" customClass="THEquipoImagenTableViewCell">
+                                <rect key="frame" x="0.0" y="158" width="600" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mYQ-Qp-yPj" id="h5G-Ve-yIU">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6Az-UC-8kz">
-                                <rect key="frame" x="200" y="264" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lzP-2h-Z4l" customClass="THEquipoImagenCollectionView">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="kbw-08-x9J">
+                                                <size key="itemSize" width="100" height="100"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imagenCollectionViewCell" id="LI1-W3-wVe" customClass="THEquipoImagenCollectionViewCell">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lW7-bC-fqX">
+                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <connections>
+                                                        <outlet property="imagen" destination="lW7-bC-fqX" id="G3R-3V-Kox"/>
+                                                        <segue destination="nbz-9K-9hW" kind="show" identifier="verImagenNormal" id="Tgl-pW-lOl"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="lzP-2h-Z4l" firstAttribute="top" secondItem="h5G-Ve-yIU" secondAttribute="topMargin" constant="-8" id="0au-eH-YPV"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="lzP-2h-Z4l" secondAttribute="bottom" constant="-8.5" id="7l5-eC-igx"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="lzP-2h-Z4l" secondAttribute="trailing" constant="-8" id="IAP-2N-nZZ"/>
+                                        <constraint firstItem="lzP-2h-Z4l" firstAttribute="leading" secondItem="h5G-Ve-yIU" secondAttribute="leadingMargin" constant="-8" id="NMf-RE-VjM"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="equipoImagenCollectionView" destination="lzP-2h-Z4l" id="mXy-Eq-lyI"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="agregarImagenNormalCell" id="KoQ-3c-YSO">
+                                <rect key="frame" x="0.0" y="258" width="600" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KoQ-3c-YSO" id="W51-Ee-GpJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dpf-fD-1KZ">
-                            <rect key="frame" x="0.0" y="64" width="600" height="200"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </collectionReusableView>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Agregar imagen normal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JzC-bP-VHY">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="69.5"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="imagenTermicaCell" id="WY8-81-D48" customClass="THEquipoImagenTermicaTableViewCell">
+                                <rect key="frame" x="0.0" y="358" width="600" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WY8-81-D48" id="wSD-uI-Qca">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bz0-BD-TDO" customClass="THEquipoImagenTermicaCollectionView">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="XtF-zP-Dzo">
+                                                <size key="itemSize" width="100" height="100"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imagenTermicaCollectionViewCell" id="SZt-hL-XC5" customClass="THEquipoImagenTermicaCollectionViewCell">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fo7-x5-yj4">
+                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <connections>
+                                                        <outlet property="imagen" destination="fo7-x5-yj4" id="u5E-6o-fGR"/>
+                                                        <segue destination="nbz-9K-9hW" kind="show" identifier="verImagenTermica" id="11g-fa-wGJ"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="bz0-BD-TDO" secondAttribute="bottom" constant="-8.5" id="5do-O4-g5d"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="bz0-BD-TDO" secondAttribute="trailing" constant="-8" id="fhX-n3-vz4"/>
+                                        <constraint firstItem="bz0-BD-TDO" firstAttribute="leading" secondItem="wSD-uI-Qca" secondAttribute="leadingMargin" constant="-8" id="rg7-oz-fXR"/>
+                                        <constraint firstItem="bz0-BD-TDO" firstAttribute="top" secondItem="wSD-uI-Qca" secondAttribute="topMargin" constant="-8" id="vWV-p4-cHN"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="equipoImagenTermicaCollectionView" destination="bz0-BD-TDO" id="r8S-xR-Dla"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="agregarImagenTermicaCell" id="G8m-Wt-g8Y">
+                                <rect key="frame" x="0.0" y="458" width="600" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G8m-Wt-g8Y" id="s0v-M8-W56">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Agregar imagen térmica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="et7-qJ-xzr">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="69.5"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="Vkm-Ma-Xly" id="xqK-xU-Zar"/>
-                            <outlet property="delegate" destination="Vkm-Ma-Xly" id="vBF-Dp-YId"/>
+                            <outlet property="dataSource" destination="zcp-J1-dCh" id="BXF-ZT-2nC"/>
+                            <outlet property="delegate" destination="zcp-J1-dCh" id="LCr-z0-KA6"/>
                         </connections>
-                    </collectionView>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yhd-mK-7As" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    </tableView>
+                    <connections>
+                        <outlet property="equipoCondicionTermicaButton" destination="eck-se-lgB" id="gZQ-ex-zot"/>
+                        <outlet property="equipoCreadoLabel" destination="dnQ-QA-8Ri" id="XbT-yE-OWn"/>
+                        <outlet property="equipoNombreTextField" destination="PRg-XU-f6F" id="ypo-aS-TZ6"/>
+                        <outlet property="equipoUbicacionTextField" destination="mV0-kA-KTE" id="oSt-Eq-i9k"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QwP-X8-yEN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2845" y="804"/>
+        </scene>
+        <!--Editar Equipo Condicion Termica Table View Controller-->
+        <scene sceneID="c0e-vt-Ru5">
+            <objects>
+                <tableViewController id="65d-ef-C9Z" customClass="THEditarEquipoCondicionTermicaTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dsg-k4-Bnh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Kc1-im-DCt" customClass="condicionTermicalCell">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kc1-im-DCt" id="2fq-Lt-ZPI">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="65d-ef-C9Z" id="e0y-Gn-Fzi"/>
+                            <outlet property="delegate" destination="65d-ef-C9Z" id="eYy-5O-B8K"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lu1-AO-EAd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2845" y="19"/>
+        </scene>
+        <!--Imagen View Controller-->
+        <scene sceneID="zCU-O5-cOu">
+            <objects>
+                <viewController id="nbz-9K-9hW" customClass="THImagenViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8oT-0I-dMn"/>
+                        <viewControllerLayoutGuide type="bottom" id="8dJ-OA-20V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vml-3h-aTa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RQe-vx-mTa">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8dJ-OA-20V" firstAttribute="top" secondItem="RQe-vx-mTa" secondAttribute="bottom" id="FuA-aS-mJB"/>
+                            <constraint firstItem="RQe-vx-mTa" firstAttribute="leading" secondItem="Vml-3h-aTa" secondAttribute="leadingMargin" constant="-20" id="NLj-kd-3o0"/>
+                            <constraint firstItem="RQe-vx-mTa" firstAttribute="top" secondItem="Vml-3h-aTa" secondAttribute="topMargin" id="ZCg-CB-atM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RQe-vx-mTa" secondAttribute="trailing" constant="-20" id="iW6-Dx-jN6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imagenView" destination="RQe-vx-mTa" id="O0Y-gM-cl7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Kh-e0-wve" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3576" y="804"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xmY-ZM-7KK">
@@ -327,7 +503,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ki-Ub-NED" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2072" y="1600"/>
+            <point key="canvasLocation" x="2072" y="1815"/>
         </scene>
         <!--Equipo Form View Controller-->
         <scene sceneID="m32-gM-7TO">
@@ -357,7 +533,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Srk-Ae-fSJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2845" y="1600"/>
+            <point key="canvasLocation" x="2845" y="1815"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dSJ-Ee-AaD">
@@ -452,7 +628,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IwD-O8-x9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2072" y="1815"/>
+            <point key="canvasLocation" x="1224" y="2715"/>
         </scene>
         <!--Equipo Condicion Termica View Controller-->
         <scene sceneID="COS-Dg-6qn">
@@ -482,7 +658,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sln-p6-E9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2878" y="1815"/>
+            <point key="canvasLocation" x="2072" y="2715"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZWu-Te-AFb">
@@ -517,10 +693,13 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0tj-GK-CFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-404" y="1475"/>
+            <point key="canvasLocation" x="-412" y="1379"/>
         </scene>
     </scenes>
     <resources>
         <image name="logoManco" width="1018" height="200"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="11g-fa-wGJ"/>
+    </inferredMetricsTieBreakers>
 </document>

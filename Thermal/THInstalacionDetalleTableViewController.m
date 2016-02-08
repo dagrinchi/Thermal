@@ -38,7 +38,7 @@ static NSString *kAgregarEquipoSegueID = @"agregarEquipo";
     [self.instalacionTituloTextField setText:self.instalacion.nombre];
     [self.instalacionCreadoLabel setText:[NSDateFormatter localizedStringFromDate:self.instalacion.creado
                                                                         dateStyle:NSDateFormatterShortStyle
-                                                                        timeStyle:NSDateFormatterFullStyle]];
+                                                                        timeStyle:NSDateFormatterShortStyle]];
     
 
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"creado" ascending:YES];
@@ -142,20 +142,6 @@ static NSString *kAgregarEquipoSegueID = @"agregarEquipo";
 
 }
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 
 #pragma mark - Navigation
 
@@ -163,20 +149,24 @@ static NSString *kAgregarEquipoSegueID = @"agregarEquipo";
     
     if ([segue.identifier isEqualToString:kAgregarEquipoSegueID]) {
         
-        THInstalacion *instalacion = nil;
-        
         if ([sender isKindOfClass:[THInstalacion class]]) {
-
-            instalacion = (THInstalacion *)sender;
 
             UINavigationController *navController = (UINavigationController *) segue.destinationViewController;
             THEquipoFormViewController *equipoFormViewController = (THEquipoFormViewController *) navController.topViewController;
-            equipoFormViewController.instalacion = instalacion;
+            equipoFormViewController.instalacion = (THInstalacion *)sender;
         }
     }
 }
 
 #pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    THEquipoTableViewController *equipoTableViewController = (THEquipoTableViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"equipoViewController"];
+    equipoTableViewController.equipo = [self.equipos objectAtIndex:indexPath.row];
+    
+    [self.navigationController pushViewController:equipoTableViewController animated:YES];
+}
 
 - (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath {
     self.singleEdit = YES;

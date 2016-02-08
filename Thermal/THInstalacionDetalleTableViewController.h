@@ -12,6 +12,7 @@
 #import "THEquipoCondicionTermica.h"
 #import "THEquipoTableViewCell.h"
 #import "THEquipoFormViewController.h"
+#import "THEquipoTableViewController.h"
 
 @interface THInstalacionDetalleTableViewController : UITableViewController
 
