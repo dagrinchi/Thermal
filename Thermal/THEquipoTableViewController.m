@@ -240,6 +240,9 @@
         self.equipoNombreTextField.enabled = editing;
         self.equipoUbicacionTextField.enabled = editing;
         self.equipoCondicionTermicaButton.enabled = editing;
+        [self.equipoCondicionTermicaButton.layer setBorderWidth:0.5f];
+        [self.equipoCondicionTermicaButton.layer setBorderColor:[UIColor blueColor].CGColor];
+        [self.equipoCondicionTermicaButton.layer setCornerRadius:8.0f];
         
         [self.navigationItem setHidesBackButton:editing animated:YES];
         

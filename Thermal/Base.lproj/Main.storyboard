@@ -147,32 +147,32 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre Equipo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yv4-PL-VJ4">
-                                            <rect key="frame" x="14" y="8" width="578" height="30"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                            <rect key="frame" x="14" y="8" width="431.5" height="27.5"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="23"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ubicacion" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iw-q4-WOn">
-                                            <rect key="frame" x="14" y="37" width="578" height="22.5"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ubicacion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iw-q4-WOn">
+                                            <rect key="frame" x="14" y="39" width="431.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condicion térmica" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoB-kr-hso">
-                                            <rect key="frame" x="453.5" y="23" width="128.5" height="20.5"/>
+                                            <rect key="frame" x="453" y="23" width="128.5" height="20.5"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-ThinItalic" family="Helvetica Neue" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="9iw-q4-WOn" secondAttribute="trailing" id="1Tw-Bf-58V"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="9iw-q4-WOn" secondAttribute="trailing" constant="146.5" id="1Tw-Bf-58V"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="9iw-q4-WOn" secondAttribute="bottom" constant="2" id="CeQ-x8-87X"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="BoB-kr-hso" secondAttribute="trailing" constant="10" id="FaS-yX-KUQ"/>
                                         <constraint firstItem="BoB-kr-hso" firstAttribute="top" secondItem="Z51-24-fa1" secondAttribute="topMargin" constant="15" id="PMf-h7-rX5"/>
                                         <constraint firstAttribute="topMargin" secondItem="yv4-PL-VJ4" secondAttribute="top" id="VEF-xq-BUZ"/>
                                         <constraint firstItem="yv4-PL-VJ4" firstAttribute="leading" secondItem="Z51-24-fa1" secondAttribute="leadingMargin" constant="6" id="XnD-hs-i9q"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="yv4-PL-VJ4" secondAttribute="trailing" id="ujo-kb-hvy"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="yv4-PL-VJ4" secondAttribute="trailing" constant="146.5" id="ujo-kb-hvy"/>
                                         <constraint firstItem="9iw-q4-WOn" firstAttribute="leading" secondItem="Z51-24-fa1" secondAttribute="leadingMargin" constant="6" id="v3I-hC-wdL"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -234,7 +234,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nombre del equipo" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="PRg-XU-f6F">
-                                    <rect key="frame" x="8" y="8" width="584" height="32"/>
+                                    <rect key="frame" x="8" y="8" width="584" height="27"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="27"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <connections>
@@ -242,8 +242,8 @@
                                     </connections>
                                 </textField>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ubicación" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mV0-kA-KTE">
-                                    <rect key="frame" x="8" y="40" width="584" height="23"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
+                                    <rect key="frame" x="8" y="35" width="584" height="23"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="19"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <connections>
                                         <outlet property="delegate" destination="zcp-J1-dCh" id="qeF-W4-Zp5"/>
@@ -256,7 +256,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eck-se-lgB">
-                                    <rect key="frame" x="8" y="61" width="584" height="35"/>
+                                    <rect key="frame" x="100" y="59" width="400" height="35"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="19"/>
                                     <state key="normal" title="Condición térmica"/>
                                     <connections>
@@ -268,12 +268,12 @@
                             <constraints>
                                 <constraint firstItem="dnQ-QA-8Ri" firstAttribute="leading" secondItem="wAT-8z-cyi" secondAttribute="leading" constant="8" id="3db-Ma-0ZT"/>
                                 <constraint firstItem="PRg-XU-f6F" firstAttribute="top" secondItem="wAT-8z-cyi" secondAttribute="top" constant="8" id="8Yk-ts-PzC"/>
-                                <constraint firstItem="eck-se-lgB" firstAttribute="top" secondItem="mV0-kA-KTE" secondAttribute="bottom" constant="-2" id="C2d-Z1-KJK"/>
+                                <constraint firstItem="eck-se-lgB" firstAttribute="top" secondItem="mV0-kA-KTE" secondAttribute="bottom" constant="1" id="C2d-Z1-KJK"/>
                                 <constraint firstAttribute="trailing" secondItem="PRg-XU-f6F" secondAttribute="trailing" constant="8" id="I3R-ju-smT"/>
                                 <constraint firstAttribute="trailing" secondItem="mV0-kA-KTE" secondAttribute="trailing" constant="8" id="Id4-aG-a4C"/>
-                                <constraint firstAttribute="trailing" secondItem="eck-se-lgB" secondAttribute="trailing" constant="8" id="K86-cn-F4V"/>
-                                <constraint firstItem="dnQ-QA-8Ri" firstAttribute="top" secondItem="eck-se-lgB" secondAttribute="bottom" constant="3" id="WFz-ez-fCL"/>
-                                <constraint firstItem="eck-se-lgB" firstAttribute="leading" secondItem="wAT-8z-cyi" secondAttribute="leading" constant="8" id="fwP-JW-X7u"/>
+                                <constraint firstAttribute="trailing" secondItem="eck-se-lgB" secondAttribute="trailing" constant="100" id="K86-cn-F4V"/>
+                                <constraint firstItem="dnQ-QA-8Ri" firstAttribute="top" secondItem="eck-se-lgB" secondAttribute="bottom" constant="5" id="WFz-ez-fCL"/>
+                                <constraint firstItem="eck-se-lgB" firstAttribute="leading" secondItem="wAT-8z-cyi" secondAttribute="leading" constant="100" id="fwP-JW-X7u"/>
                                 <constraint firstItem="mV0-kA-KTE" firstAttribute="leading" secondItem="wAT-8z-cyi" secondAttribute="leading" constant="8" id="gWy-yw-YZ8"/>
                                 <constraint firstItem="PRg-XU-f6F" firstAttribute="leading" secondItem="wAT-8z-cyi" secondAttribute="leading" constant="8" id="hh0-TN-T3r"/>
                                 <constraint firstAttribute="bottom" secondItem="dnQ-QA-8Ri" secondAttribute="bottom" constant="10.5" id="pQE-d4-5qa"/>

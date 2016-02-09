@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 #import "THEquipo.h"
 #import "THEquipoCondicionTermica.h"
 #import "THImagenNormal.h"

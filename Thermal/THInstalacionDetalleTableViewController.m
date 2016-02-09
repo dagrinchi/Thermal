@@ -204,22 +204,22 @@ static NSString *kAgregarEquipoSegueID = @"agregarEquipo";
     return equipo;
 }
 
-- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == EQUIPOS_SECTION) {
-        
-        THEquipoFormViewController *equipoFormViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"equipoFormViewController"];
-        equipoFormViewController.instalacion = self.instalacion;
-
-        THEquipoTableViewCell *equipoCell = [tableView cellForRowAtIndexPath:indexPath];
-        equipoFormViewController.equipo = [self equipoByName:equipoCell.equipoNombreLabel.text];
-        
-        UINavigationController *navController =
-        [[UINavigationController alloc] initWithRootViewController:equipoFormViewController];
-
-        navController.modalPresentationStyle = UIModalPresentationFullScreen;
-        [self.navigationController presentViewController:navController animated:YES completion:nil];
-    }
-}
+//- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+//    if (indexPath.section == EQUIPOS_SECTION) {
+//        
+//        THEquipoFormViewController *equipoFormViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"equipoFormViewController"];
+//        equipoFormViewController.instalacion = self.instalacion;
+//
+//        THEquipoTableViewCell *equipoCell = [tableView cellForRowAtIndexPath:indexPath];
+//        equipoFormViewController.equipo = [self equipoByName:equipoCell.equipoNombreLabel.text];
+//        
+//        UINavigationController *navController =
+//        [[UINavigationController alloc] initWithRootViewController:equipoFormViewController];
+//
+//        navController.modalPresentationStyle = UIModalPresentationFullScreen;
+//        [self.navigationController presentViewController:navController animated:YES completion:nil];
+//    }
+//}
 
 /*- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -311,10 +311,10 @@ static NSString *kAgregarEquipoSegueID = @"agregarEquipo";
     } else if (proposedSection > EQUIPOS_SECTION) {
         target = [NSIndexPath indexPathForRow:(self.instalacion.equipos.count - 1) inSection:EQUIPOS_SECTION];
     } else {
-        NSUInteger ingredientsCount_1 = self.instalacion.equipos.count - 1;
+        NSUInteger equiposCount_1 = self.instalacion.equipos.count - 1;
         
-        if (proposedDestinationIndexPath.row > (NSInteger)ingredientsCount_1) {
-            target = [NSIndexPath indexPathForRow:ingredientsCount_1 inSection:EQUIPOS_SECTION];
+        if (proposedDestinationIndexPath.row > (NSInteger)equiposCount_1) {
+            target = [NSIndexPath indexPathForRow:equiposCount_1 inSection:EQUIPOS_SECTION];
         }
     }
     
@@ -325,9 +325,26 @@ static NSString *kAgregarEquipoSegueID = @"agregarEquipo";
 {
     
     THEquipo *equipo = [self.equipos objectAtIndex:fromIndexPath.row];
-    [self.equipos removeObjectAtIndex:fromIndexPath.row];
-    [self.equipos insertObject:equipo atIndex:toIndexPath.row];
+    THEquipo *newEquipo = (THEquipo *)[NSEntityDescription insertNewObjectForEntityForName:@"THEquipo"
+                                                    inManagedObjectContext:self.instalacion.managedObjectContext];
     
+    newEquipo.instalacion = equipo.instalacion;
+    newEquipo.nombreEquipo = [NSString stringWithFormat:@"%@ copia", equipo.nombreEquipo];
+    newEquipo.ubicacion = equipo.ubicacion;
+    newEquipo.condicionTermica = equipo.condicionTermica;
+    newEquipo.creado = equipo.creado;
+    
+    NSError *error = nil;
+    if (![self.instalacion.managedObjectContext save:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    [self.equipos insertObject:newEquipo atIndex:toIndexPath.row];
+    
+    
+//    [self.equipos removeObjectAtIndex:fromIndexPath.row];
+//    [self.equipos insertObject:equipo atIndex:toIndexPath.row];
+//    
     NSInteger start = fromIndexPath.row;
     if (toIndexPath.row < start) {
         start = toIndexPath.row;
@@ -340,6 +357,8 @@ static NSString *kAgregarEquipoSegueID = @"agregarEquipo";
         equipo = [self.equipos objectAtIndex:i];
         equipo.displayOrder = [NSNumber numberWithInteger:i];
     }
+    
+    [tableView reloadData];
 }
 
 
