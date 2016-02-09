@@ -10,8 +10,8 @@
 
 @interface THEquipoTableViewController ()
 
-@property (nonatomic, strong) NSManagedObject *imagenObj;
 @property (assign) BOOL singleEdit;
+@property (assign) NSInteger currentSelectedSection;
 
 @end
 
@@ -24,18 +24,6 @@
     [super viewDidLoad];
     
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"creado" ascending:YES];
-    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:&sortDescriptor count:1];
-    
-    NSMutableArray *imagenesNormalesOrdenadas = [[NSMutableArray alloc] initWithArray:[self.equipo.imagenNormal allObjects]];
-    [imagenesNormalesOrdenadas sortUsingDescriptors:sortDescriptors];
-    
-    NSMutableArray *imagenesTermicasOrdenadas = [[NSMutableArray alloc] initWithArray:[self.equipo.imagenTermica allObjects]];
-    [imagenesTermicasOrdenadas sortUsingDescriptors:sortDescriptors];
-    
-    self.imagenesNormales = imagenesNormalesOrdenadas;
-    self.imagenesTermicas = imagenesTermicasOrdenadas;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -48,6 +36,19 @@
     [self.equipoCreadoLabel setText:[NSDateFormatter localizedStringFromDate:self.equipo.creado
                                                                    dateStyle:NSDateFormatterShortStyle
                                                                    timeStyle:NSDateFormatterShortStyle]];
+    
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"creado" ascending:YES];
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:&sortDescriptor count:1];
+    
+    NSMutableArray *imagenesNormalesOrdenadas = [[NSMutableArray alloc] initWithArray:[self.equipo.imagenNormal allObjects]];
+    [imagenesNormalesOrdenadas sortUsingDescriptors:sortDescriptors];
+    
+    NSMutableArray *imagenesTermicasOrdenadas = [[NSMutableArray alloc] initWithArray:[self.equipo.imagenTermica allObjects]];
+    [imagenesTermicasOrdenadas sortUsingDescriptors:sortDescriptors];
+    
+    self.imagenesNormales = imagenesNormalesOrdenadas;
+    self.imagenesTermicas = imagenesTermicasOrdenadas;
     
     [self.tableView reloadData];
 }
@@ -85,9 +86,22 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSInteger rows = 1;
-    if (self.editing) {
-        rows++;
+    switch (section) {
+        case IMAGEN_NORMAL_SECTION:
+            if (self.editing) {
+                rows += 2;
+            }
+            break;
+        case IMAGEN_TERMICA_SECTION:
+            if (self.editing) {
+                rows++;
+            }
+            break;
+        default:
+            break;
     }
+    
+    
     return rows;
 }
 
@@ -100,10 +114,12 @@
     switch (indexPath.section) {
         case IMAGEN_NORMAL_SECTION:
             
-            if (row < 1) {
+            if (row == 0) {
                 kCellIdentifier = @"imagenNormalCell";
-            } else {
+            } else if (row == 1) {
                 kCellIdentifier = @"agregarImagenNormalCell";
+            } else if (row == 2) {
+                kCellIdentifier = @"tomarImagenNormalCell";
             }
             
             break;
@@ -131,16 +147,16 @@
         case IMAGEN_NORMAL_SECTION:
             
             if (row == 0) {
-                THEquipoImagenTableViewCell *customCell = (THEquipoImagenTableViewCell *)cell;
-                [customCell setCollectionViewDataSourceDelegate:self indexPath:indexPath];
+                THEquipoImagenTableViewCell *equipoImagenTableViewCell = (THEquipoImagenTableViewCell *)cell;
+                [equipoImagenTableViewCell setCollectionViewDataSourceDelegate:self indexPath:indexPath];
             }
             
             break;
         case IMAGEN_TERMICA_SECTION:
             
             if (row == 0) {
-                THEquipoImagenTermicaTableViewCell *customCell = (THEquipoImagenTermicaTableViewCell *)cell;
-                [customCell setCollectionViewDataSourceDelegate:self indexPath:indexPath];
+                THEquipoImagenTermicaTableViewCell *equipoImagenTermicaTableViewCell = (THEquipoImagenTermicaTableViewCell *)cell;
+                [equipoImagenTermicaTableViewCell setCollectionViewDataSourceDelegate:self indexPath:indexPath];
             }
             
             break;
@@ -155,8 +171,8 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CGFloat height = 100;
-    if (indexPath.row == 1) {
-        height = 70;
+    if ((indexPath.row == 1) || (indexPath.row == 2)) {
+        height = 50;
     }
     return height;
 }
@@ -173,28 +189,30 @@
     
     if (editingStyle == UITableViewCellEditingStyleInsert) {
         
-        if (indexPath.section == IMAGEN_NORMAL_SECTION) {
-            
-            THImagenNormal *imagenNormal =
-            (THImagenNormal *)[NSEntityDescription insertNewObjectForEntityForName:@"THImagenNormal"
-                                                            inManagedObjectContext:self.equipo.managedObjectContext];
-            imagenNormal.creado = [NSDate date];
-            [self.equipo addImagenNormalObject:imagenNormal];
-            self.imagenObj = imagenNormal;
-            
-        } else if (indexPath.section == IMAGEN_TERMICA_SECTION) {
-            
-            THImagenTermica *imagenTermica =
-            (THImagenTermica *)[NSEntityDescription insertNewObjectForEntityForName:@"THImagenTermica"
-                                                            inManagedObjectContext:self.equipo.managedObjectContext];
-            imagenTermica.creado = [NSDate date];
-            [self.equipo addImagenTermicaObject:imagenTermica];
-            
-            self.imagenObj = imagenTermica;
-        }
-
         UIImagePickerController *imagePicker = [UIImagePickerController new];
         imagePicker.delegate = self;
+        
+        switch (indexPath.section) {
+            case IMAGEN_NORMAL_SECTION:
+                if (indexPath.row == 1) {
+                    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+                } else if (indexPath.row == 2) {
+                    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+                }
+                
+                break;
+            case IMAGEN_TERMICA_SECTION:
+                if (indexPath.row == 1) {
+                    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+                }
+                
+                break;
+                
+            default:
+                break;
+        }
+        
+        self.currentSelectedSection = indexPath.section;
         [self presentViewController:imagePicker animated:YES completion:nil];
 
     }
@@ -205,7 +223,7 @@
     
     UITableViewCellEditingStyle style = UITableViewCellEditingStyleNone;
     
-    if (indexPath.row == 1) {
+    if ((indexPath.row == 1) || (indexPath.row == 2)) {
         style = UITableViewCellEditingStyleInsert;
     }
     
@@ -227,7 +245,7 @@
         
         [self.tableView beginUpdates];
         
-        NSArray *imagenNormalInsertIndexPath = [NSArray arrayWithObjects:[NSIndexPath indexPathForRow:1 inSection:IMAGEN_NORMAL_SECTION], nil];
+        NSArray *imagenNormalInsertIndexPath = [NSArray arrayWithObjects:[NSIndexPath indexPathForRow:1 inSection:IMAGEN_NORMAL_SECTION], [NSIndexPath indexPathForRow:2 inSection:IMAGEN_NORMAL_SECTION], nil];
         
         NSArray *imagenTermicaInsertIndexPath = [NSArray arrayWithObjects:[NSIndexPath indexPathForRow:1 inSection:IMAGEN_TERMICA_SECTION], nil];
         
@@ -275,7 +293,28 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)selectedImage editingInfo:(NSDictionary *)editingInfo {
     
-    [self.imagenObj setValue:selectedImage forKey:@"imagen"];
+    NSManagedObject *imagenObj = nil;
+    
+    if (self.currentSelectedSection == IMAGEN_NORMAL_SECTION) {
+        
+        THImagenNormal *imagenNormal =
+        (THImagenNormal *)[NSEntityDescription insertNewObjectForEntityForName:@"THImagenNormal"
+                                                        inManagedObjectContext:self.equipo.managedObjectContext];
+        imagenNormal.creado = [NSDate date];
+        [self.equipo addImagenNormalObject:imagenNormal];
+        imagenObj = imagenNormal;
+        
+    } else if (self.currentSelectedSection == IMAGEN_TERMICA_SECTION) {
+        
+        THImagenTermica *imagenTermica =
+        (THImagenTermica *)[NSEntityDescription insertNewObjectForEntityForName:@"THImagenTermica"
+                                                         inManagedObjectContext:self.equipo.managedObjectContext];
+        imagenTermica.creado = [NSDate date];
+        [self.equipo addImagenTermicaObject:imagenTermica];
+        imagenObj = imagenTermica;
+    }
+    
+    [imagenObj setValue:selectedImage forKey:@"imagen"];
     NSError *error = nil;
     if (![self.equipo.managedObjectContext save:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
