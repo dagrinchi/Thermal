@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "THImagenNormal.h"
+#import "THImagenTermica.h"
 
-@interface THImagenViewController : UIViewController
+@interface THImagenViewController : UIViewController <UIScrollViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIImageView *imagenView;
-@property (nonatomic, strong) UIImage *imagen;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, strong) NSManagedObject *imagenObj;
 
 @end

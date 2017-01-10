@@ -296,8 +296,6 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)selectedImage editingInfo:(NSDictionary *)editingInfo {
     
-    NSManagedObject *imagenObj = nil;
-    
     if (self.currentSelectedSection == IMAGEN_NORMAL_SECTION) {
         
         THImagenNormal *imagenNormal =
@@ -305,7 +303,13 @@
                                                         inManagedObjectContext:self.equipo.managedObjectContext];
         imagenNormal.creado = [NSDate date];
         [self.equipo addImagenNormalObject:imagenNormal];
-        imagenObj = imagenNormal;
+        
+        [imagenNormal setValue:selectedImage forKey:@"imagen"];
+        NSError *error = nil;
+        if (![self.equipo.managedObjectContext save:&error]) {
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
         
     } else if (self.currentSelectedSection == IMAGEN_TERMICA_SECTION) {
         
@@ -314,14 +318,13 @@
                                                          inManagedObjectContext:self.equipo.managedObjectContext];
         imagenTermica.creado = [NSDate date];
         [self.equipo addImagenTermicaObject:imagenTermica];
-        imagenObj = imagenTermica;
-    }
-    
-    [imagenObj setValue:selectedImage forKey:@"imagen"];
-    NSError *error = nil;
-    if (![self.equipo.managedObjectContext save:&error]) {
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+        
+        [imagenTermica setValue:selectedImage forKey:@"imagen"];
+        NSError *error = nil;
+        if (![self.equipo.managedObjectContext save:&error]) {
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
     }
     
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -389,6 +392,8 @@
                 THEquipoImagenCollectionViewCell *equipoImagenCollectionViewCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"imagenCollectionViewCell" forIndexPath:indexPath];
                 THImagenNormal *imagenNormal = [self.imagenesNormales objectAtIndex:indexPath.item];
                 [equipoImagenCollectionViewCell.imagen setImage:imagenNormal.imagen];
+                equipoImagenCollectionViewCell.indexPath = indexPath;
+                
                 cell = equipoImagenCollectionViewCell;
             }
             
@@ -396,9 +401,11 @@
         case IMAGEN_TERMICA_SECTION:
             
             if (row == 0) {
-                THEquipoImagenCollectionViewCell *equipoImagenTermicaCollectionViewCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"imagenTermicaCollectionViewCell" forIndexPath:indexPath];
+                THEquipoImagenTermicaCollectionViewCell *equipoImagenTermicaCollectionViewCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"imagenTermicaCollectionViewCell" forIndexPath:indexPath];
                 THImagenTermica *imagenTermica = [self.imagenesTermicas objectAtIndex:indexPath.item];
                 [equipoImagenTermicaCollectionViewCell.imagen setImage:imagenTermica.imagen];
+                equipoImagenTermicaCollectionViewCell.indexPath = indexPath;
+                
                 cell = equipoImagenTermicaCollectionViewCell;
             }
             
@@ -420,12 +427,14 @@
 
         THImagenViewController *imagenNormalViewController = segue.destinationViewController;
         THEquipoImagenCollectionViewCell *equipoImagenCollectionViewCell = (THEquipoImagenCollectionViewCell *)sender;
-        imagenNormalViewController.imagen = equipoImagenCollectionViewCell.imagen.image;
-    } else if ([segue.identifier isEqualToString:@"verImagenTermica"]) {
+        imagenNormalViewController.imagenObj = (THImagenNormal *)[self.imagenesNormales objectAtIndex:equipoImagenCollectionViewCell.indexPath.row];
         
+    } else if ([segue.identifier isEqualToString:@"verImagenTermica"]) {
+
         THImagenViewController *imagenTermicaViewController = segue.destinationViewController;
         THEquipoImagenTermicaCollectionViewCell *equipoImagenTermicaCollectionViewCell = (THEquipoImagenTermicaCollectionViewCell *)sender;
-        imagenTermicaViewController.imagen = equipoImagenTermicaCollectionViewCell.imagen.image;
+        imagenTermicaViewController.imagenObj = (THImagenTermica *)[self.imagenesTermicas objectAtIndex:equipoImagenTermicaCollectionViewCell.indexPath.row];
+        
     } else if ([segue.identifier isEqualToString:@"cambiarCondicionTermica"]) {
         
         THEditarEquipoCondicionTermicaTableViewController *editarCondicionTermicaTableViewController = segue.destinationViewController;

@@ -42,7 +42,7 @@
                                             <rect key="frame" x="15" y="0.0" width="570" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -124,7 +124,7 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha de creación" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZF-Yl-4N5">
                                     <rect key="frame" x="8" y="44" width="584" height="20.5"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -149,19 +149,19 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre Equipo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yv4-PL-VJ4">
                                             <rect key="frame" x="14" y="8" width="431.5" height="27.5"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="23"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ubicacion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iw-q4-WOn">
                                             <rect key="frame" x="14" y="39" width="431.5" height="20.5"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condicion térmica" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoB-kr-hso">
                                             <rect key="frame" x="453" y="23" width="128.5" height="20.5"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-ThinItalic" family="Helvetica Neue" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -193,7 +193,7 @@
                                             <rect key="frame" x="15" y="0.0" width="570" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -252,7 +252,7 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha de creación" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnQ-QA-8Ri">
                                     <rect key="frame" x="8" y="99" width="584" height="20.5"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eck-se-lgB">
@@ -341,7 +341,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Agregar imagen normal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JzC-bP-VHY">
                                             <rect key="frame" x="15" y="0.0" width="570" height="50"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -357,7 +357,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Tomar imagen normal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0c-Mt-7nj">
                                             <rect key="frame" x="15" y="0.0" width="570" height="50"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -395,7 +395,7 @@
                                                     </view>
                                                     <connections>
                                                         <outlet property="imagen" destination="fo7-x5-yj4" id="u5E-6o-fGR"/>
-                                                        <segue destination="nbz-9K-9hW" kind="show" identifier="verImagenTermica" id="11g-fa-wGJ"/>
+                                                        <segue destination="nbz-9K-9hW" kind="show" identifier="verImagenTermica" id="36b-rz-z0V"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
@@ -422,7 +422,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Agregar imagen térmica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="et7-qJ-xzr">
                                             <rect key="frame" x="15" y="0.0" width="570" height="50"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -485,20 +485,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RQe-vx-mTa">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFr-Oj-luU">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RQe-vx-mTa">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="RQe-vx-mTa" firstAttribute="centerY" secondItem="MFr-Oj-luU" secondAttribute="centerY" id="4gL-fW-tXd"/>
+                                    <constraint firstItem="RQe-vx-mTa" firstAttribute="leading" secondItem="MFr-Oj-luU" secondAttribute="leading" id="91q-5P-iba"/>
+                                    <constraint firstAttribute="bottom" secondItem="RQe-vx-mTa" secondAttribute="bottom" id="PYz-qq-mhq"/>
+                                    <constraint firstAttribute="trailing" secondItem="RQe-vx-mTa" secondAttribute="trailing" id="QVn-s5-pDn"/>
+                                    <constraint firstItem="RQe-vx-mTa" firstAttribute="top" secondItem="MFr-Oj-luU" secondAttribute="top" id="Xfw-fM-a7f"/>
+                                    <constraint firstItem="RQe-vx-mTa" firstAttribute="centerX" secondItem="MFr-Oj-luU" secondAttribute="centerX" id="tRX-UG-u1p"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="nbz-9K-9hW" id="cmK-2w-Fe2"/>
+                                </connections>
+                            </scrollView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJv-np-HoX">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="trash" id="Hmz-LO-cw5">
+                                        <connections>
+                                            <action selector="eliminarImagenAction:" destination="nbz-9K-9hW" id="UPd-yP-qWc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="8dJ-OA-20V" firstAttribute="top" secondItem="RQe-vx-mTa" secondAttribute="bottom" id="FuA-aS-mJB"/>
-                            <constraint firstItem="RQe-vx-mTa" firstAttribute="leading" secondItem="Vml-3h-aTa" secondAttribute="leadingMargin" constant="-20" id="NLj-kd-3o0"/>
-                            <constraint firstItem="RQe-vx-mTa" firstAttribute="top" secondItem="Vml-3h-aTa" secondAttribute="topMargin" id="ZCg-CB-atM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RQe-vx-mTa" secondAttribute="trailing" constant="-20" id="iW6-Dx-jN6"/>
+                            <constraint firstAttribute="trailing" secondItem="MFr-Oj-luU" secondAttribute="trailing" id="0rD-vy-z0z"/>
+                            <constraint firstItem="MFr-Oj-luU" firstAttribute="trailing" secondItem="cJv-np-HoX" secondAttribute="trailing" id="EDb-9C-rZn"/>
+                            <constraint firstItem="MFr-Oj-luU" firstAttribute="leading" secondItem="cJv-np-HoX" secondAttribute="leading" id="EbI-4g-fyH"/>
+                            <constraint firstItem="MFr-Oj-luU" firstAttribute="leading" secondItem="Vml-3h-aTa" secondAttribute="leading" id="I4X-w4-ACd"/>
+                            <constraint firstItem="MFr-Oj-luU" firstAttribute="bottom" secondItem="cJv-np-HoX" secondAttribute="bottom" id="Jda-FF-wgX"/>
+                            <constraint firstItem="MFr-Oj-luU" firstAttribute="bottom" secondItem="8dJ-OA-20V" secondAttribute="top" id="caC-IM-c4b"/>
+                            <constraint firstItem="MFr-Oj-luU" firstAttribute="top" secondItem="Vml-3h-aTa" secondAttribute="top" id="mjk-gw-6H8"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imagenView" destination="RQe-vx-mTa" id="O0Y-gM-cl7"/>
+                        <outlet property="scrollView" destination="MFr-Oj-luU" id="GFB-h3-tb9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Kh-e0-wve" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -604,7 +634,7 @@
                                             <rect key="frame" x="15" y="0.0" width="570" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -718,6 +748,6 @@
         <image name="logoManco" width="1018" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="11g-fa-wGJ"/>
+        <segue reference="Tgl-pW-lOl"/>
     </inferredMetricsTieBreakers>
 </document>

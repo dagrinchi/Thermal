@@ -11,5 +11,6 @@
 @interface THEquipoImagenCollectionViewCell : UICollectionViewCell
 
 @property (strong, nonatomic) IBOutlet UIImageView *imagen;
+@property (strong, nonatomic) NSIndexPath *indexPath;
 
 @end
